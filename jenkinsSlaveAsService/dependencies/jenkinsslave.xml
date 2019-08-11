@@ -1,0 +1,9 @@
+<service>
+    <id>JenkinsSlave</id>
+    <name>Jenkins</name>
+    <description>This service runs Jenkins continuous integration system.</description>
+    <env name="JENKINS_HOME" value="C:\users\jenkins\"/>
+    <executable>java</executable>
+    <arguments>-jar agent.jar -jnlpUrl http://advice-jenkins.schantz.com/computer/%COMPUTERNAME%/slave-agent.jnlp -workDir "C:\Jw"</arguments>
+    <logmode>rotate</logmode>
+</service>
